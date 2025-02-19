@@ -7,12 +7,12 @@ export default PlayerInput = ({ submitAnswer, randomPokemon }) => {
   const handleSubmitAnswer = () => {
     submitAnswer(answer);
     randomPokemon();
-    setAnswer(null);
+    setAnswer("");
   };
 
   const handleSkip = () => {
     randomPokemon();
-    setAnswer(null);
+    setAnswer("");
   };
 
   return (

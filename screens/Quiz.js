@@ -6,7 +6,7 @@ import Sprite from "../components/Sprite";
 
 const Quiz = () => {
   const [allpokemon, setAllPokemon] = useState([]);
-  const [currentPokemon, setCurrentPokemon] = useState({});
+  const [currentPokemon, setCurrentPokemon] = useState(null);
   const [score, setScore] = useState(0);
 
   useEffect(() => {
@@ -50,6 +50,10 @@ const Quiz = () => {
       sprite: data.sprites.front_default,
     });
   };
+
+  useEffect(() => {
+    if (allpokemon.length > 0) randomPokemon();
+  }, [allpokemon]);
 
   const submitAnswer = (answer) => {
     if (!currentPokemon || !answer) return;

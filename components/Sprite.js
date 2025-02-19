@@ -1,5 +1,4 @@
 import { StyleSheet, Image, View } from "react-native";
-import React from "react";
 
 const Sprite = ({currentPokemon}) => {
   return (
